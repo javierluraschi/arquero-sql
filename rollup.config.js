@@ -13,13 +13,13 @@ export default {
   plugins: [
     json(),
     bundleSize(),
-    nodeResolve({ modulesOnly: true })
+    nodeResolve({ modulesOnly: true, browser: true }),
   ],
   onwarn,
   output: [
     {
       file: 'dist/arquero-sql.js',
-      name: 'aq',
+      name: 'aqsql',
       format: 'umd'
     },
   ]
